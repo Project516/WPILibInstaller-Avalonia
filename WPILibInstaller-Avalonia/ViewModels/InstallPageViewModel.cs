@@ -1093,6 +1093,12 @@ StartupWMClass=code
                 CreateLinuxShortcut("DataLogTool", "datalogtool", wpilibYear, "Datalog Tool", "datalogtool.png", token);
                 CreateLinuxShortcut("SysId", "sysid", wpilibYear, "System Identification", "sysid.png", token);
                 CreateLinuxShortcut("WPIcal", "wpical", wpilibYear, "WPIcal", "wpical.png", token);
+
+                if (toInstallProvider.Model.InstallEverything)
+                {
+                    var docsPath = Path.Combine(installDir, "documentation", "frc-docs", "index.html");
+                    CreateLinuxShortcut("WPILib Documentation", $"xdg-open \"{docsPath}\"", wpilibYear, "WPILib Documentation", "wpilib-icon-256.png", token);
+                }
             }
         }
     }
